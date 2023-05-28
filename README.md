@@ -1,8 +1,19 @@
 # parallel-and-distributed-GA-using-Iceland_Model
+<h1>Table of content</h1>
+<ul>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#steps">Steps</a></li>
+   <li><a href="#structure">Structure</a></li>
+   <li><a href="#main">Main Container</a></li>
+   <li><a href="#simple">Simple Container</a></li>
+   <li><a href="#jade">Jade Interface</a> </li>
+  <li><a href="#conclusion">Conclusion</a></li>
+</ul>
 <h1 id="intro">Introduction</h1>
 <p>The island model is a concept in genetic algorithms that involves dividing the population into multiple subpopulations, also known as islands. Each island operates independently and evolves its own set of solutions through genetic operators such as selection, crossover, and mutation. Periodically, individuals from different islands migrate between them, allowing for information exchange and diversity preservation.</p>
-<img src=""/>
+<img src="/capture/islandmodel.png"/>
 <h1 id="steps">Steps</h1>
+<img src="steps.png"/>
 <p>The basic steps of a genetic algorithm are as follows:</p>
 <ul>
   <li><b>Initialization:</b>Start by creating an initial population of individuals (solutions) randomly or using some heuristic. Each individual is represented as a string of genes, which encodes a potential solution to the problem.</li>
@@ -12,20 +23,20 @@
   <li><b>Mutation: </b>Introduce random changes or mutations in the genetic material of individuals. Mutation helps explore new regions of the search space that may not be covered by crossover alone. It maintains diversity in the population and prevents premature convergence to suboptimal solutions.</li>
 </ul>
 <p>These five phases—initial population, fitness function, selection, crossover, and mutation—are iteratively applied in each generation of the genetic algorithm. By repeating these steps, the algorithm explores the search space, promotes better solutions through selection and crossover, introduces variations through mutation, and converges towards optimal or near-optimal solutions to the problem.</p>
-<h1>Structure</h1>
-<img src="/capture/structure.PNG" />
+<h1 id="structure">Structure</h1>
+<img src="/capture/str.PNG" />
 <h1 id ="main">Main Container</h1>
-<img src="/capture/mainContainer.PNG" />
+<img src="/capture/main.PNG" />
 <p>The provided code initializes and starts the main container in the JADE framework using the MainContainer class. Upon execution, the code creates an instance of the JADE runtime by invoking Runtime.instance(). This runtime instance is responsible for managing the execution of agents. The code then creates a ProfileImpl object and sets the Profile.GUI parameter to "true", enabling the graphical user interface for the main container. Next, the main container is created using the runtime instance and the profile. Finally, the start() method is called on the main container, initiating the execution of the JADE platform. This code serves as the entry point for the JADE application, creating the necessary infrastructure to support the execution of agents in a multi-agent system.</p>
 <h1 id="simple">Simple Container </h1>
-<img src="/capture/SimpleContainer.PNG" />
+<img src="/capture/simple.PNG" />
 <p><b>"SimpleContainer"</b>sets up a JADE platform to run a multi-agent system. It includes the necessary steps to create and configure the platform, as well as the initialization of agents.<br>
 We creates multiple instances of an agent named "IslandAgent" and starts them within the agent container. The number of islands is determined by the constant value <b>"GAUtils.ISLAND_NUMBER"</b>  is set to 5, it means that the code will create and start 5 instances of the <b>"IslandAgent"</b> agent within the agent container. Each agent will be named "Island0", "Island1", "Island2", "Island3", and "Island4".<br>
   Finally, a single instance of the <b> "MasterAgent"</b> agent is created and started within the agent container. This agent will coordinate the activities of the island agents.
 </p>
 <h1 id ="jade">Jade Interface </h1>
-<img src="/capture/Interface Jade.PNG" />
-<h1>Conclusion</h1>
+<img src="/capture/jade.PNG" />
+<h1 id="conclusion">Conclusion</h1>
 <p>In conclusion, the Genetic Algorithm (GA) is a powerful optimization algorithm inspired by the principles of natural selection and genetics. It is used to solve complex problems by mimicking the process of evolution. GA operates on a population of individuals, representing potential solutions, and iteratively applies selection, crossover, and mutation operators to evolve and improve the solutions over generations. Through the use of a fitness function, GA can efficiently search for optimal or near-optimal solutions in large search spaces.<br>
 
 Multi-Agent Systems (MAS) involve the coordination and interaction of multiple autonomous agents to achieve a common goal or solve a complex problem. MAS provide a decentralized and distributed approach to problem-solving, where agents can communicate, cooperate, and coordinate their actions to accomplish tasks that may be beyond the capabilities of individual agents. MAS enable parallel processing, fault tolerance, scalability, and adaptability in solving complex problems.<br>
