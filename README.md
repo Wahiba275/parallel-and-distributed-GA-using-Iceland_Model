@@ -13,7 +13,7 @@
 <p>The island model is a concept in genetic algorithms that involves dividing the population into multiple subpopulations, also known as islands. Each island operates independently and evolves its own set of solutions through genetic operators such as selection, crossover, and mutation. Periodically, individuals from different islands migrate between them, allowing for information exchange and diversity preservation.</p>
 <img src="/capture/islandmodel.png"/>
 <h1 id="steps">Steps</h1>
-<img src="steps.png"/>
+<img src="steps.jpeg"/>
 <p>The basic steps of a genetic algorithm are as follows:</p>
 <ul>
   <li><b>Initialization:</b>Start by creating an initial population of individuals (solutions) randomly or using some heuristic. Each individual is represented as a string of genes, which encodes a potential solution to the problem.</li>
